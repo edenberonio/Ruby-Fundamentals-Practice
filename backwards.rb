@@ -1,3 +1,8 @@
 puts "what's your name?"
 name = gets
-puts "hello #{name.reverse}"
+
+def reverse(name)
+  puts "hello #{name.reverse}"
+end
+
+puts reverse(name)
