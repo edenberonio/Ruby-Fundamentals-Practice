@@ -1,3 +1,6 @@
 fav_colours= ['blue','pink','yellow','orange']
 
-fav_colours[3]
+ages= [24,300, 23, 22, 10,51,100]
+
+ages.sort! {|x,y| x <=> y}
+puts ages
