@@ -9,12 +9,36 @@
      Ruby Documentation Review
     </header>
     <h1>STRINGS</h1>
-    length:
-      
+      <ol>
+        <li>length: Returns the number of elements in self. May be zero.</li>
+        <li>strip: Removes leading and trailing whitespace from str. Returns nil if str was not altered. <strong>EX:</strong> "    hello    ".strip   #=> "hello"</li>
+        <li>split: Divides str into substrings based on a delimiter, returning an array of these substrings. <strong>EX:</strong> " now's  the time".split        #=> ["now's", "the", "time"]   or  " now's  the time".split(/ /)   #=> ["", "now's", "", "the", "time"]</li>
+        <li>start_with?: Returns true if str starts with one of the prefixes given. <strong>EX:</strong>"hello".start_with?("hell")               #=> true
+</li>
+      </ol>
 
-    Strip
-    Split
-    Start_with?
+    <h1>Array</h1>
+      <ol>
+        <li>first: Returns the first element, or the first n elements, of the enumerable. If the enumerable is empty, the first form returns nil, and the second form returns an empty array.</li>
+        <li>delete_at: Deletes the element at the specified index, returning that element, or nil if the index is out of range. <strong>EX:</strong>a = ["ant", "bat", "cat", "dog"]
+a.delete_at(2)    #=> "cat"</li>
+        <li>delete: Deletes all items from self that are equal to obj.</li>
+        <li>pop: Removes the last element from self and returns it, or nil if the array is empty.</li>
+      </ol>
+
+    <h1>Time</h1>
+      <ol>
+        <li>now: Alias for ::new. Returns a Time object initialized to the current system time.Creates a Time object based on given values, interpreted as UTC (GMT). The year must be specified. Other values default to the minimum value for that field (and may be nil or omitted). Months may be specified by numbers from 1 to 12, or by the three-letter English month names. Hours are specified on a 24-hour clock (0..23). Raises an ArgumentError if any values are out of range. Will also accept ten arguments in the order output by #to_a. <strong>EX: </strong> Time.utc(2000,"jan",1,20,15,1)  #=> 2000-01-01 20:15:01 UTC
+Time.gm(2000,"jan",1,20,15,1)   #=> 2000-01-01 20:15:01 UTC </li>
+      </ol>
+
+    <h1>File</h1>
+      <ol>
+        <li>exist: Return true if the named file exists.</li>
+        <li>extname: Returns the extension (the portion of file name in path after the period.) <strong>EX:</strong> File.extname("test.rb")         #=> ".rb"
+File.extname("a/b/d/test.rb")   #=> ".rb"</li>
+      </ol>
+
 
 
 
